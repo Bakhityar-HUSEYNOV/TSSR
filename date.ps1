@@ -1,12 +1,8 @@
-$date = Get-Date
-Write-Output $date
+$date = "2025-13-08"  # Or any string you want to check
 
-$expectedYear = 2025
-$expectedMonth = 7
-$expectedDay = 8
-
-if ($date.Year -eq $expectedYear -and $date.Month -eq $expectedMonth -and $date.Day -eq $expectedDay) {
-    Write-Output "The date matches: $expectedYear-$expectedMonth-$expectedDay"
-} else {
-    Write-Output "The date does not match."
+try {
+    $parsedDate = [datetime]$date
+    Write-Output "The variable is a valid date."
+} catch {
+    Write-Output "The variable is NOT a valid date."
 } 
