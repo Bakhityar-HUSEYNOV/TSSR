@@ -1,4 +1,4 @@
-$date = "2025-13-08"  # Or any string you want to check
+$date = "2025-13-08"  # $date = Get-date
 
 try {
     $IfDate = [datetime]$date
