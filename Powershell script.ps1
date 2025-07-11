@@ -92,6 +92,7 @@ foreach ($User in $Users)
     else {
     Write-Warning "no no no"
          }
-
+         #lol xd
+    write-output "lol xd"
 }
 	
