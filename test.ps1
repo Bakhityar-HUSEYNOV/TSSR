@@ -5,3 +5,4 @@ if ($ip -match '^((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]?[0-9])(\.(25[0-5]|2[0-4][
 } else {
     Write-Output "Not a valid IPv4 address."
 }
+write-output "lol xd"
