@@ -22,3 +22,67 @@ Reading package lists...
 E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 13933 (apt)
 E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
 [1;33mFailed to install Tailscale, check the logs for details
+DEBUG:curl not found, installing curl...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  curl
+0 upgraded, 1 newly installed, 0 to remove and 1 not upgraded.
+Need to get 226 kB of archives.
+After this operation, 534 kB of additional disk space will be used.
+Get:1 http://fr.archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.6 [226 kB]
+Fetched 226 kB in 0s (907 kB/s)
+Selecting previously unselected package curl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 157327 files and directories currently installed.)
+Preparing to unpack .../curl_8.5.0-2ubuntu10.6_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.6) ...
+Setting up curl (8.5.0-2ubuntu10.6) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+DEBUG: Tailscale is not installed, installing now...
+Installing Tailscale for ubuntu noble, using method apt
++ mkdir -p --mode=0755 /usr/share/keyrings
++ curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.noarmor.gpg
++ tee /usr/share/keyrings/tailscale-archive-keyring.gpg
++ chmod 0644 /usr/share/keyrings/tailscale-archive-keyring.gpg
++ curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.tailscale-keyring.list
++ tee /etc/apt/sources.list.d/tailscale.list
+# Tailscale packages for ubuntu noble
+deb [signed-by=/usr/share/keyrings/tailscale-archive-keyring.gpg] https://pkgs.tailscale.com/stable/ubuntu noble main
++ chmod 0644 /etc/apt/sources.list.d/tailscale.list
++ apt-get update
+Hit:1 http://fr.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://fr.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://fr.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 https://packages.microsoft.com/repos/code stable InRelease
+Hit:5 http://security.ubuntu.com/ubuntu noble-security InRelease
+Get:6 https://pkgs.tailscale.com/stable/ubuntu noble InRelease
+Fetched 6,578 B in 1s (12.6 kB/s)
+Reading package lists...
++ apt-get install -y tailscale tailscale-archive-keyring
+Reading package lists...
+Building dependency tree...
+Reading state information...
+tailscale-archive-keyring is already the newest version (1.35.181).
+The following NEW packages will be installed:
+  tailscale
+0 upgraded, 1 newly installed, 0 to remove and 1 not upgraded.
+Need to get 0 B/32.6 MB of archives.
+After this operation, 61.3 MB of additional disk space will be used.
+Selecting previously unselected package tailscale.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 157334 files and directories currently installed.)
+Preparing to unpack .../tailscale_1.84.0_amd64.deb ...
+Unpacking tailscale (1.84.0) ...
+Setting up tailscale (1.84.0) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/tailscaled.service → /usr/lib/systemd/system/tailscaled.service.
++ [ false = true ]
++ set +x
+Installation complete! Log in to start using Tailscale by running:
+
+tailscale up
+DEBUG: Installed Tailscale
+[1;33mDEBUG:Tailscale is logged out, attempting to authenticate...
+[1;33mDEBUG: secret auth key found, using it to authenticate Tailscale...
+[1;33mUsing auth key: tskey-auth-k2uE7tWRQu11CNTRL-CGp5p9QYcaWyMmvrdqbRaW1LQWQ9nuHj
+Some peers are advertising routes but --accept-routes is false
+[1;33mTailscale is now running, your ip address is: 100.105.223.17
