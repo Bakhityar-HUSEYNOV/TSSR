@@ -1,5 +1,4 @@
 #!/bin/bash
-#UNCOMMENT THE FOLLOWING LINES BEFORE PROD
 RED='\033[1;31m' # Red
 GREEN='\033[1;32m' # Green
 YELLOW='\033[1;33m' # Yellow
