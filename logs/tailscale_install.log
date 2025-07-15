@@ -1,0 +1,24 @@
+[1;33mDEBUG: Tailscale is not installed, installing now...
+Installing Tailscale for ubuntu noble, using method apt
++ mkdir -p --mode=0755 /usr/share/keyrings
++ curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.noarmor.gpg
++ tee /usr/share/keyrings/tailscale-archive-keyring.gpg
++ chmod 0644 /usr/share/keyrings/tailscale-archive-keyring.gpg
++ + curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.tailscale-keyring.list
+tee /etc/apt/sources.list.d/tailscale.list
+# Tailscale packages for ubuntu noble
+deb [signed-by=/usr/share/keyrings/tailscale-archive-keyring.gpg] https://pkgs.tailscale.com/stable/ubuntu noble main
++ chmod 0644 /etc/apt/sources.list.d/tailscale.list
++ apt-get update
+Hit:1 http://fr.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://fr.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://fr.archive.ubuntu.com/ubuntu noble-backports InRelease
+Get:4 https://pkgs.tailscale.com/stable/ubuntu noble InRelease
+Hit:5 https://packages.microsoft.com/repos/code stable InRelease
+Hit:6 http://security.ubuntu.com/ubuntu noble-security InRelease
+Fetched 6,578 B in 5s (1,236 B/s)
+Reading package lists...
++ apt-get install -y tailscale tailscale-archive-keyring
+E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 13933 (apt)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+[1;33mFailed to install Tailscale, check the logs for details
