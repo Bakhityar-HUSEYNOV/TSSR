@@ -68,10 +68,10 @@ else
 fi
 
 # Check if the secret auth key file exists and attempt to use it for authentication
-if [ -f ./top_secret ] ; then
+if [ -f /tmp/key.txt ] ; then
     echo -e "${YELLOW}Secret auth key found, using it to authenticate Tailscale..."
     echo -e "${YELLOW}DEBUG: secret auth key found, using it to authenticate Tailscale..." >>logs/tailscale_install.log
-    TAILSCALE_AUTH_KEY=$(cat ./top_secret)
+    TAILSCALE_AUTH_KEY=$(cat /tmp/key.txt)
     echo -e "${YELLOW}Using auth key: $TAILSCALE_AUTH_KEY" >>logs/tailscale_install.log
     tailscale up --authkey $TAILSCALE_AUTH_KEY >>logs/tailscale_install.log
     if [ $? -eq 0 ] ; then
