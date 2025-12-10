@@ -87,3 +87,7 @@ else
     echo -e "${RED}DEBUG: No secret auth key found, please provide one in top_secret.txt" >>/var/log/tailscale_install.log
     exit 1
 fi
+
+Write-Output "${YELLOW}Script finished successfully."
+
+Read-Host -Prompt "${YELLOW}Press Enter to exit"
