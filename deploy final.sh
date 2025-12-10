@@ -11,6 +11,7 @@ wget http://10.10.10.1/key/top_secret -O /tmp/key.txt
 if [[ $EUID -ne 0 ]]; then
    echo -e "${YELLOW} This script must be run as root" 
    echo -e "${YELLOW}DEBUG: Not ran as a root" >>/var/log/tailscale_install.log
+   read -p "Press Enter to exit..."
    exit 1
 fi
 
@@ -28,6 +29,7 @@ if [ $? -ne 0 ] ; then
     else
         echo -e "${RED}Failed to install curl, check the /var/log for errors" 
         echo -e "${RED}DEBUG: Failed to install curl, check the /var/log for errors" >>/var/log/tailscale_install.log
+        read -p "Press Enter to exit..."
         exit 1
     fi
 fi
@@ -52,6 +54,7 @@ else
     else
         echo -e "${RED}Failed to install Tailscale, check the /var/log for details"
         echo -e "${RED}Failed to install Tailscale, check the /var/log for details" >>/var/log/tailscale_install.log
+        read -p "Press Enter to exit..."
         exit 1
     fi
 fi
@@ -63,6 +66,7 @@ if tailscale status | grep -q "Logged out" ; then
 else
     echo -e "${GREEN}Tailscale is already authenticated, no need to log in again"
     echo -e "${GREEN}DEBUG:Tailscale is already authenticated, no need to log in again" >>/var/log/tailscale_install.log
+    read -p "Press Enter to exit..."
     exit 0
 fi
 
@@ -77,17 +81,19 @@ if [ -f /tmp/key.txt ] ; then
         echo -e "${GREEN}Tailscale authenticated successfully"
         echo -e "${GREEN}Tailscale is now running, your ip address is: $(tailscale ip -4)"
         echo -e "${GREEN}Tailscale is now running, your ip address is: $(tailscale ip -4)" >>/var/log/tailscale_install.log
+        read -p "Press Enter to exit..."
     else
         echo -e "${RED}DEBUG: Failed to authenticate Tailscale, check the /var/log for details" >>/var/log/tailscale_install.log
         echo -e "${RED}Failed to authenticate Tailscale, check the /var/log for details" 
+        read -p "Press Enter to exit..."
         exit 1
     fi
 else
     echo -e "${RED}No secret auth key found, please provide one in top_secret.txt"
     echo -e "${RED}DEBUG: No secret auth key found, please provide one in top_secret.txt" >>/var/log/tailscale_install.log
+    read -p "Press Enter to exit..."
     exit 1
 fi
 
-Write-Output "${YELLOW}Script finished successfully."
 
-Read-Host -Prompt "${YELLOW}Press Enter to exit"
+read -p "Press Enter to exit..."
