@@ -33,7 +33,8 @@ StandardOutput=journal
 [Install]
 WantedBy=multi-user.target
 EOF
-
+#enable the created service
+ln -sf /etc/systemd/system/post_deployment.service "$TARGET_MOUNT_POINT/etc/systemd/system/multi-user.target.wants/post_deployment.service"
 # Unmount the partition.
 umount "$TARGET_MOUNT_POINT" 
  
