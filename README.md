@@ -4,7 +4,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=MC-Baki&label=Profile views&color=0e75b6&style=flat" alt="MC-Baki" /> </p>
 
-- 📄 Know about my experiences **[https://drive.google.com/file/d/1xQpAg4v5eREMFlN1s59QZCOfcYVRjFH-/view?usp=drive_link](https://drive.google.com/file/d/1xQpAg4v5eREMFlN1s59QZCOfcYVRjFH-/view?usp=drive_link)**
+- 📄 Mon CV **[https://drive.google.com/file/d/1xQpAg4v5eREMFlN1s59QZCOfcYVRjFH-/view?usp=drive_link](https://drive.google.com/file/d/1xQpAg4v5eREMFlN1s59QZCOfcYVRjFH-/view?usp=drive_link)**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
