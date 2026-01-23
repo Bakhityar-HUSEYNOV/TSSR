@@ -2,11 +2,10 @@
 
 ### Technicien Systèmes et Réseaux
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=MC-Baki&label=Profile views&color=0e75b6&style=flat" alt="MC-Baki" /> </p>
 
 - 📄 Mon CV **[https://drive.google.com/file/d/1xQpAg4v5eREMFlN1s59QZCOfcYVRjFH-/view?usp=drive_link](https://drive.google.com/file/d/1xQpAg4v5eREMFlN1s59QZCOfcYVRjFH-/view?usp=drive_link)**
 
-<h3 align="left">Connect with me:</h3>
+<h3 align="left">Les réseaux sociaux:</h3>
 <p align="left">
 <a href="https://github.com/MC-Baki" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="MC-Baki" height="30" width="40" /></a>
 <a href="www.linkedin.com/in/bakhtiyar-huseynov-332482374" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="Bakhtiyar HUSEYNOV" height="30" width="40" /></a>
